@@ -1,0 +1,9 @@
+[submodule "roles/fluentd"]
+	path = roles/fluentd
+	url = git@github.com:balanced-cookbooks/ansible-fluentd.git
+[submodule "roles/ntp"]
+	path = roles/ntp
+	url = git@github.com:resmo/ansible-role-ntp.git
+[submodule "roles/base"]
+	path = roles/base
+	url = git@github.com:balanced-cookbooks/ansible-base.git
