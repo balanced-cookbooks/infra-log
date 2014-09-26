@@ -46,5 +46,11 @@ $ confu cfn create formations/log.py ConfVer=f26fa6d KeyName=your-aws-ssh-key-na
 ## Update a stack
 
 ```bash
+$ confu cfn update test-log-bi1dmz formations/log.py KeyName=mj-mbpro-may-2014 ConfVer=da37796 DesiredCapacity=2 MaxSize=3
+```
+
+## Re-run the playbook on the stack
+
+```bash
 $ ansible-playbook -i inventories/poundpay site.yml
 ```
