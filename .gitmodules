@@ -7,3 +7,9 @@
 [submodule "roles/fluentd2"]
 	path = roles/fluentd
 	url = git@github.com:balanced-cookbooks/ansible-fluentd.git
+[submodule "roles/td-agent"]
+	path = roles/td-agent
+	url = https://github.com/kawasakitoshiya/ansible-td-agent.git
+[submodule "infras/global"]
+	path = infras/global
+	url = git@github.com:balanced-cookbooks/infra-global.git

@@ -15,6 +15,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "precise64"
   config.hostmanager.enabled = true # Must install: vagrant plugin install vagrant-hostmanager
 
+  config.vm.provision "shell", inline: <<EOG
+  sudo apt-get update
+  sudo apt-get install ipython python-pip python-dev -qq -y
+
+EOG
+
   config.vm.define project_name do |node|
     node.vm.network :private_network, :ip => '10.20.1.10'
     config.vm.synced_folder '.', "/home/vagrant/#{project_name}"

@@ -1,0 +1,12 @@
+---
+fluentd_services:
+  - name: balanced
+    pattern: 'balanced.**'
+    stores:
+      s3:
+      file:
+  - name: justitia
+    pattern: 'justitia.**'
+    stores:
+      s3:
+      file:

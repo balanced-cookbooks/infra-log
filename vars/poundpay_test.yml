@@ -1,0 +1,16 @@
+---
+fluentd_services:
+  - name: balanced
+    pattern: 'balanced.**'
+    stores:
+      s3:
+        s3_prefix: balanced-test
+      file:
+        path: balanced-test
+  - name: justitia
+    pattern: 'justitia.**'
+    stores:
+      s3:
+        s3_prefix: justitia-test
+      file:
+        path: justitia-test

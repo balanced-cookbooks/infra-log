@@ -1,0 +1,27 @@
+---
+
+- hosts: all
+  vars:
+    fluentd_sources:
+      - priority: 20
+        name: forwarding
+        options: {}
+    fluentd_matches:
+      - priority: 05
+        name: reformer
+        options: {}
+      - priority: 10
+        name: debug
+        options:
+          pattern: 'debug.**'
+    fluentd_plugins:
+      - fluent-plugin-record-reformer
+      - fluent-plugin-kafka
+  vars_files:
+    - "infras/global/vars/{{ aws_account }}.yml"
+    - "infras/global/vars/{{ aws_account }}_{{ infra_env }}.yml"
+  roles:
+    - base
+    - ntp
+    - td-agent
+    - fluentd
