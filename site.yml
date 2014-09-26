@@ -41,6 +41,10 @@
       - priority: 05
         name: reformer
         options: {}
+      - priority: 06
+        name: reformer
+        options:
+          tag: header['channel']
       - priority: 10
         name: debug
         options:
