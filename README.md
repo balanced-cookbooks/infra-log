@@ -41,3 +41,10 @@ to see what we've released:
 ```bash
 $ confu cfn create formations/log.py ConfVer=f26fa6d KeyName=your-aws-ssh-key-name
 ```
+
+
+## Update a stack
+
+```bash
+$ ansible-playbook -i inventories/poundpay site.yml
+```
