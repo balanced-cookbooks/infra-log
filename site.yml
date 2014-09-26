@@ -48,6 +48,13 @@
     fluentd_plugins:
       - fluent-plugin-record-reformer
       - fluent-plugin-kafka
+    # this file is used to debug any issues you may have. see README for how to
+    # utilize.
+    fluentd_in_tail_files:
+      - name: debug.log
+        path: /var/log/td-agent/debug.log
+        format: json
+
   vars_files:
     - "infras/global/vars/{{ aws_account }}.yml"
     - "infras/global/vars/{{ aws_account }}_{{ aws_region }}.yml"

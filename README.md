@@ -54,3 +54,11 @@ $ confu cfn update test-log-bi1dmz formations/log.py KeyName=mj-mbpro-may-2014 C
 ```bash
 $ ansible-playbook -i inventories/poundpay site.yml
 ```
+
+## Debugging
+
+```bash
+$ echo '{"channel": "balanced-integration.debug.test", "payload": {"x": 10}}' >> /var/log/td-agent/debug.log
+```
+
+where `channel` is the routing key you want to use.
