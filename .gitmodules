@@ -13,3 +13,6 @@
 [submodule "infras/global"]
 	path = infras/global
 	url = git@github.com:balanced-cookbooks/infra-global.git
+[submodule "roles/newrelic"]
+	path = roles/newrelic
+	url = https://github.com/sivel/ansible-newrelic.git

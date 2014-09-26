@@ -65,4 +65,5 @@
     - base
     - ntp
     - td-agent
+    - newrelic
     - fluentd
