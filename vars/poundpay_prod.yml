@@ -1,10 +1,18 @@
 ---
+fluentd_s3_path_prefix: prod/
 fluentd_services:
-  - name: balanced
-    pattern: 'balanced.**'
+  - name: balanced-live
+    pattern: 'balanced-live.**'
     stores:
       s3:
       file:
+        path: balanced-prod-live
+  - name: balanced-live
+    pattern: 'balanced-live.**'
+    stores:
+      s3:
+      file:
+        path: balanced-prod-live
   - name: justitia
     pattern: 'justitia.**'
     stores:

@@ -19,7 +19,10 @@
       - fluent-plugin-kafka
   vars_files:
     - "infras/global/vars/{{ aws_account }}.yml"
+    - "infras/global/vars/{{ aws_account }}_{{ aws_region }}.yml"
     - "infras/global/vars/{{ aws_account }}_{{ infra_env }}.yml"
+    - "vars/{{ aws_account }}.yml"
+    - "vars/{{ aws_account }}_{{ infra_env }}.yml"
   roles:
     - base
     - ntp

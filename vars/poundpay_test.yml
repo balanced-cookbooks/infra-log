@@ -1,16 +1,21 @@
 ---
+fluentd_s3_path_prefix: test/
 fluentd_services:
-  - name: balanced
-    pattern: 'balanced.**'
+  - name: balanced-integration
+    pattern: 'balanced-integration.**'
     stores:
       s3:
-        s3_prefix: balanced-test
       file:
-        path: balanced-test
+        path: balanced-test-integration
+  - name: balanced-live
+    pattern: 'balanced-live.**'
+    stores:
+      s3:
+      file:
+        path: balanced-test-live
   - name: justitia
     pattern: 'justitia.**'
     stores:
       s3:
-        s3_prefix: justitia-test
       file:
         path: justitia-test
